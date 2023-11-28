@@ -31,6 +31,9 @@ body {
     align-content: center;
     text-align: center;
 }
+.log p {
+    text-align: left;
+}
 input {
     text-align: center;
     color: #284e70;
@@ -76,20 +79,48 @@ p {
     background-color: #9AA2CB;
     cursor: pointer;
 }
+.switch {
+    margin-bottom: 25px;
+    width: 250px;
+    height: 50px;
+}
+.switch p {
+    color: #FDFBFB;
+}
+#singin {
+    width: 50%;
+    height: 50px;
+    background-color: #5C98CF;
+    float: left;
+    display: flex;
+    text-align: center;
+    border-radius: 10px 0px 0px 10px;
+}
+#singup {
+    width: 125px;
+    height: 50px;
+    background-color: #3C76AA;
+    float: left;
+    display: flex;
+    text-align: center;
+    border-radius: 00px 10px 10px 0px;
+}
 /* Mobil uyumluluk için media sorgusu */
 @media (max-width: 500px) {
     .form {
         width: 85%;
-        height: 35%;
+        height: 40%;
     }
     .log {
         font-size: 25px;
     }
+    .log p {
+        font-size: 20px;
+    }
     input {
         width: 35vh;
-        height: 45px;
+        height: 40px;
         font-size: 17px;
-        margin-top: 10px;
     }
     .photo {
         visibility: hidden;
@@ -98,9 +129,25 @@ p {
         width: 0px;
     }
     .button {
-        margin-top: 25px;
+        margin-top: 15px;
         width: 120px;
         height: 35px;
+    }
+    .switch {
+        width: 150px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .switch p {
+        font-size: 15px;
+    }
+    #singin {
+        width: 75px;
+        height: 30px;
+    }
+    #singup {
+        width: 75px;
+        height: 30px;
     }
 }
 @media (max-width: 650px) and (min-width: 500px){
@@ -122,13 +169,28 @@ p {
         width: 100%;
     }
     p {
-        font-size: 17px;
+        font-size: 15px;
     }
     .button {
         margin-top: 10px;
         width: 120px;
         height: 25px;
         font-size: 20px;
+    }
+    .switch {
+        width: 150px;
+        height: 25px;
+    }
+    .switch p {
+        font-size: 15px;
+    }
+    #singin {
+        width: 75px;
+        height: 25px;
+    }
+    #singup {
+        width: 75px;
+        height: 25px;
     }
 }
 @media (max-width: 1000px) and (min-width: 650px){
@@ -150,12 +212,27 @@ p {
         width: 100%;
     }
     p {
-        font-size: 25px;
+        font-size: 20px;
     }
     .button {
         margin-top: 15px;
         width: 120px;
         height: 35px;
         font-size: 25px;
+    }
+    .switch {
+        width: 200px;
+        height: 25px;
+    }
+    .switch p {
+        font-size: 15px;
+    }
+    #singin {
+        width: 100px;
+        height: 25px;
+    }
+    #singup {
+        width: 100px;
+        height: 25px;
     }
 }
