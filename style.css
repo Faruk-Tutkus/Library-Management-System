@@ -9,6 +9,10 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
 }
 .form {
     width: 1000px;
@@ -20,6 +24,8 @@ body {
     align-items: center;
     justify-items: center;
     align-content: center;
+    flex-direction: row;
+    transition: 0.4s;
 }
 .log {
     width: 100%;
@@ -67,7 +73,7 @@ p {
     margin-top: 25px;
     background-color: #E27882;
     border-radius: 10px;
-    width: 150px;
+    width: 200px;
     height: 45px;
     text-decoration: none;
     transition-duration: 0.4s;
@@ -80,30 +86,46 @@ p {
     cursor: pointer;
 }
 .switch {
-    margin-bottom: 25px;
-    width: 250px;
+    margin-top: 30px;
+    width: 400px;
     height: 50px;
 }
 .switch p {
     color: #FDFBFB;
 }
-#singin {
-    width: 50%;
+#signupbutton {
+    width: 150px;
     height: 50px;
     background-color: #5C98CF;
-    float: left;
     display: flex;
     text-align: center;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px;
 }
-#singup {
-    width: 125px;
-    height: 50px;
-    background-color: #3C76AA;
-    float: left;
+#signup {
+    border-radius: 10px 0px 0px 10px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
     text-align: center;
-    border-radius: 00px 10px 10px 0px;
+    background-color: #D3E4F7;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    z-index: -999;
+    visibility: hidden;
+}
+#signup p {
+    text-align: left;
+}
+#cross {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px;
+    font-size: 25px;
+    color: #284e70;
 }
 /* Mobil uyumluluk için media sorgusu */
 @media (max-width: 500px) {
@@ -135,19 +157,31 @@ p {
     }
     .switch {
         width: 150px;
-        height: 30px;
+        height: 35px;
         margin-bottom: 10px;
     }
     .switch p {
         font-size: 15px;
     }
-    #singin {
-        width: 75px;
+    #signupbutton {
+        width: 85px;
         height: 30px;
     }
-    #singup {
-        width: 75px;
-        height: 30px;
+    #signup {
+        width: 275px;
+        height: 350px;
+        z-index: -999;
+    }
+    #signup p {
+        font-size: 15px;
+    }
+    #signup input {
+        width: 22vh;
+        height: 40px;
+        font-size: 17px;
+    }
+    #cross {
+        margin: 10px;
     }
 }
 @media (max-width: 650px) and (min-width: 500px){
@@ -184,13 +218,21 @@ p {
     .switch p {
         font-size: 15px;
     }
-    #singin {
+    #signupbutton {
         width: 75px;
         height: 25px;
+        margin-top: -15px;
     }
-    #singup {
-        width: 75px;
-        height: 25px;
+    #signup {
+        width: 250px;
+        height: 250px;
+        z-index: -999;
+    }
+    #signup p {
+        font-size: 15px;
+    }
+    #cross {
+        margin: 10px;
     }
 }
 @media (max-width: 1000px) and (min-width: 650px){
@@ -202,7 +244,7 @@ p {
     }
     input {
         width: 85%;
-        height: 30px;
+        height: 40px;
         font-size: 20px;
     }
     .photo {
@@ -227,12 +269,17 @@ p {
     .switch p {
         font-size: 15px;
     }
-    #singin {
-        width: 100px;
-        height: 25px;
+    #signupbutton {
+        width: 50%;
+        height: 35px;
+        margin-top: -15px;
     }
-    #singup {
-        width: 100px;
-        height: 25px;
+    #signup {
+        width: 375px;
+        height: 375px;
+        z-index: -999;
+    }
+    #signup p {
+        text-align: left;
     }
 }
