@@ -83,8 +83,20 @@ img {
     color: #284e70;
     font-family: 'Roboto Mono';
 }
-@media (max-width: 1000px) and  (min-width: 419px){
-
+@media (max-width: 1000px) and  (min-width: 800px){
+    .parent {
+        width: 800px;
+        height: auto;
+    }
+    .child {
+        width: auto;
+        height: auto;
+    }
+}
+@media (max-width: 800px) and  (min-width: 419px){
+    .container {
+        height: auto;
+    }
     .parent {
         width: auto;
         height: auto;
