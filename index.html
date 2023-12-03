@@ -33,7 +33,7 @@
                     <input type="text" id="username" placeholder="User Name">
                     <p>Password</p>
                     <input type="password" id="password" placeholder="Password">
-                    <div class="button">
+                    <div class="button" id="login">
                         <p>Log In</p>
                     </div>
                     <div class="switch">
@@ -53,6 +53,7 @@
         const signup = document.getElementById('signup')
         const cross = document.getElementById('cross')
         const form = document.querySelector('.form')
+        const login = document.getElementById('login')
         var click = false
         signupbutton.addEventListener('click', ()=> {
             form.style.filter = 'blur(25px)'
@@ -64,7 +65,9 @@
             signup.style.zIndex = '-999'
             signup.style.visibility = 'hidden'
         })
-        
+        login.addEventListener('click', ()=> {
+            window.location.href = '/admin/index.html'
+        })
    </script>
 </body>
 </html>
