@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
+    <script src="https://kit.fontawesome.com/12a3e71123.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container">
+        <div id="signup">
+            <div>
+                <div id="cross">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <p>User Name</p>
+                <input type="text" id="username" placeholder="User Name">
+                <p>Password</p>
+                <input type="password" id="password" placeholder="Password">
+                <p>Repeat Password</p>
+                <input type="password" id="password" placeholder="Password">
+                <div class="button">
+                    <p>Sign Up</p>
+                </div>
+            </div>
+        </div>
+        <div class="form" style="user-select: none;">
+            <div class="log">
+                <div>
+                    <p>User Name</p>
+                    <input type="text" id="username" placeholder="User Name">
+                    <p>Password</p>
+                    <input type="password" id="password" placeholder="Password">
+                    <div class="button" id="login">
+                        <p>Log In</p>
+                    </div>
+                    <div class="switch">
+                        <div id="signupbutton">
+                            <p>Sign Up</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="photo.jpg" alt="">
+            </div>
+        </div>
+   </div>
+   <script>
+        const signupbutton = document.getElementById('signupbutton')
+        const signup = document.getElementById('signup')
+        const cross = document.getElementById('cross')
+        const form = document.querySelector('.form')
+        const login = document.getElementById('login')
+        var click = false
+        signupbutton.addEventListener('click', ()=> {
+            form.style.filter = 'blur(25px)'
+            signup.style.zIndex = '999'
+            signup.style.visibility = 'visible'
+        })
+        cross.addEventListener('click', ()=> {
+            form.style.filter = 'blur(0px)'
+            signup.style.zIndex = '-999'
+            signup.style.visibility = 'hidden'
+        })
+        login.addEventListener('click', ()=> {
+            window.location.href = '/admin/index.html'
+        })
+   </script>
+</body>
+</html>
