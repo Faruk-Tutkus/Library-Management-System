@@ -118,6 +118,7 @@ img {
         width: auto;
     }
     .tools {
+        margin: 20px;
         width: 125px;
     }
     .tools p {
